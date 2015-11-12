@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tMz-2E-VEH">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="iKd-Re-wSx">
+            <objects>
+                <viewController id="KTA-7B-dxI" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iXf-jX-U1Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="mmS-jN-Isv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qdB-1Z-I6T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFR-7e-jrH" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdY-8C-8wI">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8yc-9Q-bU4"/>
+                                    <barButtonItem style="plain" id="3B2-c9-Aai">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="f0E-Rr-mid">
+                                            <rect key="frame" x="209" y="7" width="182" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <segments>
+                                                <segment title="Standard"/>
+                                                <segment title="Satellite"/>
+                                                <segment title="Hybrid"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="mapTypeSelector:" destination="KTA-7B-dxI" eventType="valueChanged" id="Hgt-4h-0Xa"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <connections>
+                                            <action selector="mapTypeSelector:" destination="KTA-7B-dxI" id="jD8-EZ-0dg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tBH-Gl-4iE"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FFR-7e-jrH" secondAttribute="trailing" id="4Qh-tg-ZgO"/>
+                            <constraint firstAttribute="trailing" secondItem="sdY-8C-8wI" secondAttribute="trailing" id="7VS-9c-ndj"/>
+                            <constraint firstItem="sdY-8C-8wI" firstAttribute="leading" secondItem="qdB-1Z-I6T" secondAttribute="leading" id="RHC-7m-oeD"/>
+                            <constraint firstItem="FFR-7e-jrH" firstAttribute="top" secondItem="qdB-1Z-I6T" secondAttribute="top" id="V6v-H8-xOB"/>
+                            <constraint firstItem="FFR-7e-jrH" firstAttribute="leading" secondItem="qdB-1Z-I6T" secondAttribute="leading" id="jUl-cQ-Bn0"/>
+                            <constraint firstItem="sdY-8C-8wI" firstAttribute="top" secondItem="FFR-7e-jrH" secondAttribute="bottom" id="mIY-SH-ZEc"/>
+                            <constraint firstAttribute="bottom" secondItem="sdY-8C-8wI" secondAttribute="bottom" id="pWH-Bp-Dsi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rKg-zc-V98"/>
+                    <connections>
+                        <outlet property="mapView" destination="FFR-7e-jrH" id="eCM-7e-oaI"/>
+                        <segue destination="tzY-qJ-BBd" kind="show" identifier="webView" id="7uE-YH-OwK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ruu-se-ojM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211" y="-245"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="nA6-ut-Kh7">
+            <objects>
+                <viewController id="tzY-qJ-BBd" customClass="webViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Suu-4x-1DK"/>
+                        <viewControllerLayoutGuide type="bottom" id="6dg-uJ-C2y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4sQ-gX-x5A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8d-yg-t17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976" y="-245"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZuF-aG-wsT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tMz-2E-VEH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y8C-35-AGk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KTA-7B-dxI" kind="relationship" relationship="rootViewController" id="ESV-Ek-G4n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBX-bP-7jg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="155"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "__35-[ViewController pushSearchButton:]_block_invoke:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController pushSearchButton:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mapView.camera.target">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController mapTypeSelector:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mapView.projection">
+            </PersistentString>
+            <PersistentString
+               value = "self.mapView.projection.visibleRegion">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController viewDidLoad]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "visibleRegion">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController viewWillAppear:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "visibleRegion">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__51-[ViewController mapView:didTapInfoWindowOfMarker:]_block_invoke:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.selectedPlaceWebsite">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController prepareForSegue:sender:]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[webViewController viewWillAppear:]:webViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__35-[ViewController pushSearchButton:]_block_invoke_2:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[jsonDetailsDict objectForKey:@&quot;results&quot;]objectForKey:@&quot;website&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "jsonDetailsDict">
+            </PersistentString>
+            <PersistentString
+               value = "[jsonDetailsDict objectForKey:@&quot;result&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
